@@ -75,5 +75,18 @@ Output:
   /dev/sda1       229G   70G  148G  32% /
   .........
 `````````````
+Light-weight terminal
+`````````````
+    SSHShell shell = SSHShell.builder()
+                    .keyAuth(true)      <----- Or you can use password
+                    .key(keyLocation)
+                    .username(username)
+                    .hostName(hostName)
+                    .port(port)
+                    .build();   
+    
+    shell.startTerminal()
+`````````````
+
 
   
